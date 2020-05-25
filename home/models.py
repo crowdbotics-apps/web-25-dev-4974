@@ -23,6 +23,12 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
+    hfjhfhgf = models.BigIntegerField(null=True, blank=True,)
+    gfjgf = models.BigIntegerField(null=True, blank=True,)
+    hgfjgfjhfj = models.BigIntegerField(null=True, blank=True,)
+    fdsfdsfsd = models.BigIntegerField(null=True, blank=True,)
+    hghghg = models.BigIntegerField(null=True, blank=True,)
+    ghfhgfh = models.BigIntegerField(null=True, blank=True,)
 
     @property
     def api(self):
