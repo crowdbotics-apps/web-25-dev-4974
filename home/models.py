@@ -39,3 +39,8 @@ class HomePage(models.Model):
 class Shghg(models.Model):
     "Generated Model"
     hnh = models.BigIntegerField()
+
+
+class GVfdfg(models.Model):
+    "Generated Model"
+    tryr = models.BigIntegerField()

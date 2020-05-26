@@ -1,6 +1,11 @@
 from rest_framework import viewsets
 from rest_framework import authentication
-from .serializers import CustomTextSerializer, HomePageSerializer, ShghgSerializer
+from .serializers import (
+    CustomTextSerializer,
+    GVfdfgSerializer,
+    HomePageSerializer,
+    ShghgSerializer,
+)
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.permissions import IsAdminUser
@@ -14,7 +19,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, Shghg
+from home.models import CustomText, GVfdfg, HomePage, Shghg
 
 
 class SignupViewSet(ModelViewSet):
@@ -61,3 +66,12 @@ class ShghgViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = Shghg.objects.all()
+
+
+class GVfdfgViewSet(viewsets.ModelViewSet):
+    serializer_class = GVfdfgSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = GVfdfg.objects.all()
