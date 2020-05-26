@@ -44,3 +44,8 @@ class Shghg(models.Model):
 class GVfdfg(models.Model):
     "Generated Model"
     tryr = models.BigIntegerField()
+
+
+class GFF(models.Model):
+    "Generated Model"
+    hgkjgh = models.BigIntegerField()

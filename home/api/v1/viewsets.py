@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from rest_framework import authentication
 from .serializers import (
     CustomTextSerializer,
+    GFFSerializer,
     GVfdfgSerializer,
     HomePageSerializer,
     ShghgSerializer,
@@ -19,7 +20,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, GVfdfg, HomePage, Shghg
+from home.models import CustomText, GFF, GVfdfg, HomePage, Shghg
 
 
 class SignupViewSet(ModelViewSet):
@@ -75,3 +76,12 @@ class GVfdfgViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = GVfdfg.objects.all()
+
+
+class GFFViewSet(viewsets.ModelViewSet):
+    serializer_class = GFFSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = GFF.objects.all()
